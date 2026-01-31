@@ -9,14 +9,14 @@ export default function MenuInstaller() {
       <div className="flex flex-row justify-between h-24 items-center px-12 gap-4">
         <a href="/Music Widget Setup 1.0.0.exe" download
           className="text-2xl font-bold font-clash uppercase hover:text-white 
-              transition-colors cursor-pointer flex items-center gap-4 w-1/2 h-full
+              transition-colors cursor-none flex items-center gap-4 w-1/2 h-full
               md:text-4xl">
           <i className="fa-brands fa-windows text-4xl"></i>
           Windows Installer
         </a>
         <a href="/electron-app_1.0.0_amd64.deb" download
           className="text-2xl font-bold font-clash uppercase hover:text-white 
-              transition-colors cursor-pointer flex items-center gap-4 w-1/2 h-full
+              transition-colors cursor-none flex items-center gap-4 w-1/2 h-full
               md:text-4xl">
           <i className="fa-brands fa-linux text-4xl"></i>
           Linux Installer
