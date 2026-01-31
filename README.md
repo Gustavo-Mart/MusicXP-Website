@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# MusicXP Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page oficial para o **MusicXP**, um widget de player de música moderno e interativo.
 
-Currently, two official plugins are available:
+## 🚀 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O MusicXP Website é uma aplicação desenvolvida com **React** e **Vite** para apresentar e distribuir o widget MusicXP. O site apresenta um design imersivo com cursores customizados, animações fluidas e links diretos para download do instalador.
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Design Interativo**: Interface moderna com elementos visuais ricos e responsividade.
+*   **Cursor Customizado**: Efeito visual de cursor que reage à interação do usuário.
+*   **Animações**: Transições suaves e efeitos de "shuffle" no texto utilizando **GSAP** e **Framer Motion**.
+*   **Downloads**: Acesso direto aos instaladores para **Windows** (`.exe`) e **Linux** (`.deb`).
+*   **Links Sociais**: Integração com GitHub com efeitos de hover "glare".
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Este projeto foi construído utilizando as seguintes tecnologias principais:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+*   **[React](https://react.dev/)**: Biblioteca JavaScript para construção de interfaces.
+*   **[Vite](https://vitejs.dev/)**: Build tool rápida para desenvolvimento web moderno.
+*   **[TypeScript](https://www.typescriptlang.org/)**: Superset do JavaScript que adiciona tipagem estática.
+*   **[Tailwind CSS](https://tailwindcss.com/)**: Framework CSS utility-first para estilização rápida.
+*   **[GSAP](https://gsap.com/)**: Biblioteca robusta para animações de alta performance.
+*   **[Framer Motion](https://www.framer.com/motion/)**: Biblioteca de motion para React.
+*   **[React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)**: Renderizador React para Three.js (elementos 3D).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Como Executar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para rodar o projeto localmente, siga os passos abaixo:
+
+### Pré-requisitos
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+### Instalação
+
+1.  Clone o repositório:
+    ```bash
+    git clone https://github.com/Gustavo-Mart/MusicXP-Website.git
+    ```
+2.  Entre na pasta do projeto:
+    ```bash
+    cd MusicXP-Website
+    ```
+3.  Instale as dependências (recomendado usar `pnpm` se disponível, ou `npm`):
+    ```bash
+    pnpm install
+    # ou
+    npm install
+    ```
+
+### Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
+
+```bash
+pnpm run dev
+# ou
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O projeto estará rodando em `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para gerar a versão de produção:
+
+```bash
+pnpm run build
 ```
+
+## 📂 Estrutura do Projeto
+
+*   `src/components`: Componentes reutilizáveis (MenuInstaller, CustomCursor, GlareHover, etc).
+*   `src/screens`: Telas principais da aplicação (App.tsx).
+*   `public`: Assets estáticos e arquivos de instalação.
+
+---
+
+Desenvolvido por [Gustavo Martinelli](https://github.com/Gustavo-Mart).
