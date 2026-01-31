@@ -6,7 +6,7 @@ export default function MenuInstaller() {
       xs:text-8xl
       md:hidden
       ">MusicXP</h1>
-      <div className="flex flex-row justify-between h-24 items-center px-12 gap-4">
+      <div className="flex flex-row justify-between h-24 items-start px-12 gap-4">
         <a href="/Music Widget Setup 1.0.0.exe" download
           className="text-2xl font-bold font-clash uppercase hover:text-white 
               transition-colors cursor-none flex items-center gap-4 w-1/2 h-full
